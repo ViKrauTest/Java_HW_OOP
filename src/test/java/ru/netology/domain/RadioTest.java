@@ -32,7 +32,8 @@ public class RadioTest {
     @CsvFileSource(resources = "/dataIncreaseVolume.csv")
     void increaseVolumeTest (int currentVolume, int expected) {
         Radio radio = new Radio();
-        radio.increaseVolume(currentVolume);
+        radio.setCurrentVolume(currentVolume);
+        radio.increaseVolume();
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
@@ -42,7 +43,8 @@ public class RadioTest {
     @CsvFileSource(resources = "/dataDecreaseVolume.csv")
     void decreaseVolumeTest (int currentVolume, int expected) {
         Radio radio = new Radio();
-        radio.decreaseVolume(currentVolume);
+        radio.setCurrentVolume(currentVolume);
+        radio.decreaseVolume();
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
