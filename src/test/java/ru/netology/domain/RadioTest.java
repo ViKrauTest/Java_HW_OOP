@@ -12,7 +12,8 @@ public class RadioTest {
     @CsvFileSource(resources = "/dataNextRadioStation.csv")
     void nextRadioStation (int currentRadioStation, int expected) {
         Radio radio = new Radio();
-        radio.next(currentRadioStation);
+        radio.setCurrentRadioStation(currentRadioStation);
+        radio.next();
         int actual = radio.getCurrentRadioStation();
 
         assertEquals(expected, actual);
@@ -22,7 +23,8 @@ public class RadioTest {
     @CsvFileSource(resources = "/dataPrevRadioStation.csv")
     void prevRadioStation (int currentRadioStation, int expected) {
         Radio radio = new Radio();
-        radio.prev(currentRadioStation);
+        radio.setCurrentRadioStation(currentRadioStation);
+        radio.prev();
         int actual = radio.getCurrentRadioStation();
 
         assertEquals(expected, actual);
