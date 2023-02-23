@@ -7,6 +7,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import static org.junit.Assert.assertEquals;
 
 public class RadioTest {
+
     @ParameterizedTest
     @CsvFileSource(resources = "/dataNextRadioStation.csv")
     void nextRadioStation (int currentRadioStation, int expected) {
@@ -17,6 +18,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @ParameterizedTest
     @CsvFileSource(resources = "/dataPrevRadioStation.csv")
     void prevRadioStation (int currentRadioStation, int expected) {
@@ -27,6 +29,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+
     @ParameterizedTest
     @CsvFileSource(resources = "/dataIncreaseVolume.csv")
     void increaseVolumeTest (int currentVolume, int expected) {
@@ -37,6 +40,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
+    
     @ParameterizedTest
     @CsvFileSource(resources = "/dataDecreaseVolume.csv")
     void decreaseVolumeTest (int currentVolume, int expected) {
