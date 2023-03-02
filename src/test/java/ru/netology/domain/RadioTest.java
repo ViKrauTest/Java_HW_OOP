@@ -40,7 +40,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
-    
+
     @ParameterizedTest
     @CsvFileSource(resources = "/dataDecreaseVolume.csv")
     void decreaseVolumeTest (int currentVolume, int expected) {

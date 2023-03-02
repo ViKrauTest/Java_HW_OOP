@@ -1,7 +1,9 @@
 package ru.netology.domain;
 
 public class Radio {
-
+    private int NumberOfStations = 10;
+    private int minRadiostation = 0;
+    private int maxRasiostation = NumberOfStations - 1;
     private int currentRadioStation;
     private int currentVolume;
 
@@ -10,7 +12,7 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int newCurrentRadioStation) {
-        if (0 <= newCurrentRadioStation & newCurrentRadioStation <= 9) {
+        if (this.minRadiostation <= newCurrentRadioStation & newCurrentRadioStation <= 9) {
             this.currentRadioStation = newCurrentRadioStation;
         } else {
             return;
